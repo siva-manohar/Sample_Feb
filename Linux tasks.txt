@@ -1,0 +1,48 @@
+Linux tasks:
+
+Creating Users:
+
+Task: Create a new user named "siva" with a home directory.
+
+Change Directory:
+
+Task: Navigate to the "/var/log" directory and print error.log
+
+Creating Empty Files:
+
+Task1: Create an empty file named "example.txt" in your home directory.
+Task2: Create a file with text directly
+
+Creating Files with Editors:
+
+Task: Use a text editor (like nano, vim) to create a file named "notes.txt" and add some content.
+
+Create Folders:
+
+Task: Create a folder named "documents" in your home directory.
+
+Delete Files and Folders (Multiple and Single):
+
+Task: Delete the "example.txt" file and the "documents" folder.
+
+Copying and Moving Files:
+
+Task: Copy the "notes.txt" file to a new folder named "backup" and then move it back to the home directory.
+
+Zip and Unzip:
+
+Task: Create a zip archive of the "backup" folder, and then unzip it.
+
+About File Permissions:
+
+Task1: Check the permissions of "notes.txt" and change them to allow read, write, and execute for the owner.
+Task2: Inside your home folder there will be folder called ".ssh". Give the permission to all to the folder
+
+Creating Groups and Adding Users:
+
+Task: Create a new group named "devops" and add the "siva" user to that group.
+
+Switching Users:
+
+Task: Switch to the "siva" user and perform some commands in that user's environment.
+
