@@ -1,0 +1,147 @@
+S3 =  S imple S torage S ervice 
+
+AWS S3 is a global service. It is not region based service.
+But the Bucket is region based.
+
+What is this service ?
+
+Why this service is so important ? ---> 1. Cost effective 2. Flexibility
+
+Where we use this S3 in the real time ?
+
+Where you have used S3 in your project ?
+
+1. Storing of the logs in different stages
+
+ 6 months ( 24/7 ) ---> A small startup company application ----> 4TB
+
+
+2. To store the environmental variables of the application
+
+	Environmental variables == Secrets or keysandvalues
+
+3. Data transfer
+
+
+	have you done Static web hosting ?
+4. Static web hosting  ( severless )
+
+
+In the AWS the Storage place is called as "Bucket" and it is not region based.
+
+
+Objects = files 
+
+
+S3 URI = s3://ram-1234567/Linux.txt
+
+Download:
+aws s3 cp FILE_PRESENT_LOCATION FILE_DESTINATION
+
+	FILE_PRESENT_LOCATION = S3 URI
+
+
+Upload a file:
+
+aws s3 cp FILE_PRESENT_LOCATION FILE_DESTINATION
+
+	FILE_DESTINATION = S3_URI
+
+Upload a folder:
+
+aws s3 cp --recursive FILE_PRESENT_LOCATION FILE_DESTINATION
+
+
+
+S3 Lifecycle Stages:
+
+1Gb=10paise
+			1Gb -30paise
+Deep-archieve		Archieve				1Gb = 50paisa			1GB = 1R
+4th stage		3rd stage				2nd				   1st
+
+s3 -deep glacier 	s3 - glacier			s3-Intelligent tier		S3 - standard							Online
+
+Feb			March	April			May June July			August	September15th october15th Nov15th 	dec15th jan2025 feb2025 march2025 april2025
+Mobile			Laptop	Speakers		X			
+
+
+
+S3 ( static web hosting  ) --> Cloudfront ( serverless )
+
+difference:
+
+1. Security.
+2. Distribution network.
+
+
+CDN ---> Cloudfront Distribution Network
+
+
+
+1st - create the instance --> take a look on the values
+
+2nd stop the instance ---> Compare the values with the above
+
+3rd Start the instance ---> compare the values with above 2 
+
+
+
+
+
+54.198.249.105
+
+54.204.119.236
+
+18.209.58.23
+
+
+AWS - Elastic IP
+
+When you request AWS, the AWS present with an elastic IP address which not decided by you. It is Auto-assign by the AWS.
+
+Elastic IP: How many times you restart the server you will be having same IP address, i.e., elastic IP address.
+
+How to create an Elastic IP ?
+
+How to attach and dettach an Elastic IP ?
+
+How to release the elastic IP ?
+
+
+How to recognise the IP's ?
+
+There is a range where you can recognize the Private IP's
+
+10.X.X.X to 10.X.X.X				X = 0 to 255  ==> 10.0.0.0 , 10.0.0.1, 10.0.0.2
+10.0.0.0 to 10.255.255.255
+
+172.Y.X.X to 172.Y.X.X				Y= 16 to 31
+172.16.0.0 to 172.31.0.0
+
+192.168.X.X to 192.168.X.X
+192.168.0.0 to 192.168.255.255
+
+
+Example: 10.45.65.25 ---> Priavte IP
+
+	172.31.56.45 ---> Private IP
+
+
+	172.18.256.45 ---> Public IP
+
+	100.56.89.54 ---> Public IP
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
