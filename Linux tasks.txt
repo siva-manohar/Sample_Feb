@@ -37,12 +37,3 @@ About File Permissions:
 
 Task1: Check the permissions of "notes.txt" and change them to allow read, write, and execute for the owner.
 Task2: Inside your home folder there will be folder called ".ssh". Give the permission to all to the folder
-
-Creating Groups and Adding Users:
-
-Task: Create a new group named "devops" and add the "siva" user to that group.
-
-Switching Users:
-
-Task: Switch to the "siva" user and perform some commands in that user's environment.
-

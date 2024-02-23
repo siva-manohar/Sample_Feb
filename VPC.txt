@@ -1,0 +1,23 @@
+VPC:
+
+Virtual private cloud:
+
+	If the user has access to 20 regions to use the services for that account.
+
+
+	For each region there will be a default Virtual private Cloud created by the AWS.
+
+	Other than the default one, you can create more 5 customized virtual private cloud.
+
+	in total = 1 default VPC + 5 Customized VPC = 6 VPC you can have it in one region.
+
+	when it comes to complete account = 20 X 6 VPC = 120 VPC you can use under one account.
+
+
+   Subnets: A group of IP's is called subnet
+		
+		IP = address of the system
+
+	Public subnet : which is having only public IP's
+
+	Private subnet: which is having only private IP's
