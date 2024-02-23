@@ -1,0 +1,142 @@
+requirements for creating of the server
+
+1. Name ---> done
+
+2. OS ---> done
+
+3. Instance type -->  CPU Configurations --> done
+
+	Instance = server 
+
+Instance types:
+
+    1. General purpose
+	
+	a. t2 family
+		Sizes:
+		1. t2.nano
+			
+			CPU = 0.5GB
+		       vCPU = 1 core	
+		
+		2. t2.micro
+		3. small
+		4. medium
+		5. large
+		6. xlarge
+		7. xxlarge
+	b. t3 family
+	c. m5 family
+
+
+	developer requirements : 2vCPU and 4GB CPU memory
+
+    2. Compute Optimized
+
+	a. c5 family
+
+    3. Memory Optimized
+
+	a. r5 family 
+
+    4. Storage OPtimized
+	
+	a. I3 family
+
+4. SSH
+
+	Secure socket shell 
+
+	1. Public key (.pem )
+
+		a. Connect to the server
+		b. It helps for the internal communication betweeen applications
+
+	2. Private key ( .ppk = putty private key )
+
+		a. it helps you to only connect to the server
+
+	Note: While generating the keys, you will not have 2 keys.You cann't generate both keys together. You will get one key, either public key or private key. If you generate public key then from there you can create private key.
+
+		Public key ----> private key ( now you will have both public and private )
+		
+	But if you generate private key in the starting , you can not get the public key.
+
+		Private key ----X-X-X--> Public key ( in this case you will have only private key )
+
+
+	SSH tools: These tools will help you to connect to the server in a secure way
+
+	1. gitbash ---> This will only support public key
+
+	Example: ssh -i "siva_8.pem" ubuntu@ec2-3-95-198-155.compute-1.amazonaws.com
+		
+		ssh -i "Publick_key.extension" USERNAME@PUBLIC_IP_ADDRESS_OF_THE_SERVER
+
+
+
+	2. Putty --> this will only accept private keys
+
+
+	To convert the public into the private we need one tool which is called "PuttyGen"
+
+	Steps to connect to the server with putty ( only 3 inputs needs to done )
+	1. Open the Putty
+	2. 1st input: Enter the public IP address into the hostname/ipaddress.
+	3. 2nd input: Just confirm the Port number beside the hostname which is "22" or else you can check the donwside whether it is selected "ssh".
+	4. 3rd input: On the leftside, inside the category, under the "connection" there is option called "SSH". Expand the "SSH" and you will be seeing "Auth ( authentication )". Inside the "Auth", you will be "credentials". In the credentials, uplaod the "private-key"
+
+
+5. VPC --> done
+
+6. Subnet ---> done
+
+7. Security group ---> done
+
+	a. Inbound Rule
+
+		These inbound rules will be decided for the application and default entry points needs to be take care of like port number 22, 80, 443.
+
+		rule Options: These 2 are for the security reasons
+			1. Custom
+			2. Anywhere
+			3. MyIP
+
+	b. Outbound rule
+
+		default rule will open to everything 
+
+	Note: Please dont change the outbound rule
+
+8. Volume ---> done
+
+	Gp2 and Gp3 
+
+	IOPS ( input output operations per second )
+
+	gp2 - 100 IOPS
+	gp3 - 3000 IOPS
+
+	one volume - Max 16TB 
+
+
+
+EC2 service:
+
+
+1. E lastic C ompute C loud
+
+	Elastic = flexibility
+	Compute = The work which runs in the background for 24/7 365
+	Cloud = cloud machine
+
+	EC2 = It is a machine which does the flexibility work 24/7 in the cloud.
+
+
+	EC2 = Server = instance
+
+
+
+
+
+

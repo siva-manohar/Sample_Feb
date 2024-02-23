@@ -1,0 +1,64 @@
+Volumes:
+
+volume = storage
+
+SSD = Solid State Drive
+
+HDD = Hard disk Drive
+
+
+While creating the server, you have created a volume that volume is considered as root volume.
+
+Now in any volume on the cloud which range of 8GB as minimum and 16384 GB = 16TB as maximum
+
+For one Server there will only one root/inetrnal volume and multiple external volume with the same range.
+
+
+/dev/sda1 is name of the  root volume
+
+/dev/sd[f-p] is name of the external volume ( /dev/sdf , /dev/sdg, h, j. k  l. m n o p )
+
+
+How to create and attach the external volume ?
+
+For external volumes Min: 1 GiB, Max: 16384 GiB
+
+
+How to dettach and delete the volume ?
+
+
+How to modify the volume ? either is internal or external ?
+
+To modify the small or large volume, it will take mins to days totally depending on the AWS.
+
+
+*** Note: When the server is in running state, you cannot dettach the root/Internal volume  
+
+How to dettach the internal volume ?
+
+First you have to stop the server and then only  dettach the Internal volume
+
+
+Will you be able to start the server/instance without the root volume ? NOOOOOOOOOO
+
+No, you cannot start the server without root volume. If you have the external volume stil you will not able to start the server.
+
+
+Snapshots = backups
+
+In AWS the snapshot feature is none other than backup.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
