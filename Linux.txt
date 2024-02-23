@@ -1,0 +1,459 @@
+Linux:
+
+Linux is operating system
+
+distribution:
+
+ubuntu, redhat, AmazonLinux, debian
+
+
+Linux OS installation:
+
+VMware - virtual machine
+
+
+AWS
+
+create a server --> server for rent
+
+Linux operating system:
+
+1. Graphical user interface
+
+2. Command line interface
+
+
+But from the cloud system if you take OS ---> Command line interface
+
+linux commands:
+
+dir = directory (linux) = folder ( windows )
+
+
+volume = storage = memory = 25GB
+
+
+CPU memory = RAM = 4GB
+
+pwd = present working directory
+
+When you install the linux OS ( it may be any distribution ) there will installed with 2 default users:
+
+1. root user = super user ---> username: "root"
+
+2. Distribution user
+
+for example : ubuntu distribution --> username : "ubuntu"
+
+	      Amazonlinux ----> username: "ec2-user"
+
+	      redhat distribution ----> username: "ec2-user"
+
+
+When you have the users in the Linux OS, it  will create a directory( folder ) on the user name
+
+ls = list services
+
+ls -la = list services with all data
+
+	Answers: How many items ( fodlers and files ) in the directory ?
+	Answers: How to see the hidden files ?
+
+In th linux OS, the file or folder which starts with "." will be a hidden item ?
+
+
+cd = change directory
+
+	Ex: cd DIRECTORY_NAME
+
+" cd .. " ==> will make it come out of the present folder/directory
+
+clear = clearing the screen and removing the previous data
+
+How to create a directory/folder in the Linux OS ?
+
+	Answer: mkdir DIRECTORY_NAME ( mkdir = make directory )
+
+	Error:
+
+	mkdir: cannot create directory ‘ram’: Permission denied
+
+
+ubuntu@ip-10-0-32-227
+
+username@ADDRESS_OF_THE_SERVER
+
+option:
+
+1. Ubuntu should take help of the root and create the folder
+
+	sudo = root 
+
+	sudo mkdir ram
+
+2. Directly asking the root user to create the folder
+
+	Steps:
+
+		How to switch to the root user ?
+
+	1. Swicth to the root user ---> "sudo -s" ( root , -s = switch )
+
+		root@ip-172-31-32-160
+
+	2. ask the root to create a folder
+		
+		mkdir siva
+
+	When you login into the root user then you dont need to add sudo to the command.
+
+
+	How to get out of the root user ? ---> "exit"
+		
+
+How to create a file ?
+
+option-1: where it will create a file first ( which is empty ) and then you edit it later ?
+
+	commands:
+	
+	1. touch FILE_NAME 
+
+	2. Create a file and data inside the file together  
+		
+		echo "This is first option, second command" > FILE_NAME
+
+    How to verify the data is successfully created inside the file ??
+
+	Ans: Print the file then its shows whether the data is there or not
+		
+	Command: cat FILE_NAME
+
+	What is the command to print the file ? ---> "cat" command
+
+	3. echo "This is first option, first command" > EXISTING_FILE
+
+
+option-2: Where you will enter the data first then save it later 
+
+	
+Editors ---> the place where you can edit your file. The application will helps you to edit your file.
+
+Editors in the Linux OS: "VIM and NANO"
+
+vim editor is also called "vi" editor.
+
+How to create a file with the help of "vim" editor ?
+
+Ans: vi FILE_NAME
+
+   Now the eidtor is in the silent mode
+   a. to make the file from silent mode to "insert mode" you have to press keyword "i"
+
+In the insert mode you can enter your data anything. To the save data, you need first come out of the insert mode and then save it.
+   b. coming out the insert mode will be equal to "silent mode" 
+	
+	How to do it ?
+	Ans: enter the keyword "esc"
+
+   c. How to save the data ?
+	After coming out from insert mode enter the command
+	sol: " :wq "  ( w = write and q = quit ) => save and exit
+
+      How to comeout of the editor space to terminal without saving ?
+	sol: " :q! "  ( q = quit and ! = forecefully ) => forcefully quit the editor without saving it
+
+How to create multiple empty files at a time ?
+
+command:
+
+How to delete a empty folder ?
+
+command: rmdir DIRECTORY_NAME ---> remove empty directory
+
+How to delete a folder/directory which is having files ?
+
+command: " rm -rf DIRECTORY_NAME " ----> rm = remove -rf = directory"forecfully" ==> deleting it with force when the files are still there.
+
+	It will delete the files inside the directory and directory itself
+
+	This command will work for the empty directories also.
+
+How to delete a empty file ?
+
+command: " rm FILE_NAME " ----> this will help you to delete an empty file
+
+How to delete file which has data ?
+
+command: " rm -f FILE_NAME " ---> rm = remove, -f = forcefully ==> deleting the files forcefully
+
+How to delete multiple files at a time ?
+
+command: " rm -f FILE_NAME1 FILE_NAME2 " 
+
+
+" * " ---> wildcard = selecting all or considering all
+
+How to delete all the files inside the folder ?
+
+command: " rm -f * "
+
+******How to copy the files ?
+
+command: " cp SOURCE_FILE DESTINATION_PLACE "
+
+How to copy multiple files ?
+
+command: cp SOURCE_FILE1 SOURCE_FILE2 SOURCE_FILE3 DESTINATION_PLACE
+
+Note: the last name which you mention in the cp command will be the destination place.
+
+How to move the files and directories ?
+
+command: mv SOURCE_FILE DESTINATION_PLACE
+
+command: mv SOURCE_FILE1 SOURCE_FILE2 SOURCE_FILE3 DESTINATION_PLACE
+
+" / " ---> base place --> where all the system data is there
+
+**** User management:
+
+Where will be the user list is stored ?
+
+Ans: It is stored in the file name called "passwd"
+
+It is inside the " etc " directory.
+
+ram:x:1001:1002::/home/ram:/bin/sh
+
+username:password:user_id(UID):group_id(GID)::PATH_of_the_user:EXECUTION_MODEL
+
+1. How to create an user ?
+	command: sudo adduser USERNAME
+
+2. How to create a temporary password for the user ?
+
+	command: sudo passwd USERNAME
+
+3. How to delete a user ?
+
+	command: sudo userdel USERNAME
+
+
+File permissions:
+
+				drwxrwxr-x		directory = folder
+
+
+				-rw-rw-r--		file
+
+	rwxrwxr-x
+
+r = read = 4 points
+w = write = 2 points
+x = execute = 1 points
+
+
+		1st			2nd			3rd
+	r	w	x	r	w	x	r	w	x
+
+1st part of the permission is for the person who created
+
+2nd part of the permission is for the group
+
+3rd part of the permission is for the others
+
+
+hitesh chinnam ram vamsi ( ram - senior , hitesh, chinnam, vamsi- juniors, siva - new person , freshers - siva, wahab )
+
+rwxrwxr-x ---> hitesh
+
+	r	w	x 	r	w	x	r	-	x
+
+		7			7			5
+
+	      hitesh		      juniors		      others
+
+rw-r--r-- ---> siva
+
+	r	w	-	r	-	-	r	-	-
+
+		6			4			4	
+
+	       siva	 	       freshers	       		others
+
+
+( ram, bhaskar - senior , 
+hitesh, chinnam, vamsi- juniors, 
+siva, wahab , bhaskar - freshers)
+
+rwxr-xrw- --> bhaskar
+
+	r	w	x	r	-	x	r	w	-
+
+	4	2	1	4	0	1	4	2	0 
+
+		7			5			6
+
+	     bhaskar		    freshers	     	     others       
+
+
+how to change the permissions  ?
+
+command: chmod = change modification/ change mode
+
+	  r	w	x	r	w	-	r	-	-
+
+	  4	2	1	4	2	0	4	0	0 
+
+		7			6			4
+
+	     bhaskar		    freshers	     	     others   
+
+
+	chmod 776 FILE_NAME
+
+
+How to create groups ?
+
+sudo groupadd GROUP_NAME
+
+Note: To verify the group is created or not: " /etc/group " file
+
+How to add a user to the group ?
+
+sudo usermod -aG GROUP_NAME USER_NAME
+
+How to delete the group ?
+
+sudo groupdel GROUP_NAME
+
+What is the data inside the /etc/passwd file ?
+
+ram:x:1001:1002::/home/ram:/bin/sh
+
+username:password:user_id(UID):group_id(GID)::PATH_of_the_user:EXECUTION_MODEL
+
+Note: Ctrl+C will be stopping any data or coming out of the process.
+
+CPU info:
+
+1. htop and top  ---> Each processing CPU utilization
+		
+	free -m
+
+2. How to find out the space which is allocated to this system ?
+
+		"df -h "   ----> disk free
+
+	System Configurations:  1GB CPU memory  8GB space
+
+				512MB		8GB space
+
+3. " du -sh * " ---> Disk utilization
+
+Backup:
+
+1. Zip 
+
+	sudo zip -r DESTINATION_NAME.ZIP DIRECTORY_1 DIRECTORY_2 DIRECTORY_3 ---> folder zipping
+
+	sudo zip DESTINATION_NAME.ZIP FILE_1 FILE_2 FILE_3 ----> file zipping
+
+2. unzip
+
+	unzip DESTINATION_NAME.ZIP
+
+
+Symbols:
+
+> => greater
+
+< => less
+
+& => AND
+
+| => OR
+
+
+***************************************************Grep command:
+
+cat FILE_NAME | grep WORD
+
+
+sed: replace
+
+
+sed 's/PRESENT_WORD/REPLACE_NEW_WORD/g' FILENAME
+
+Example: sed 's/node/code/g' install.sh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
