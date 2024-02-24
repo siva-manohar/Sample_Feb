@@ -1,1 +1,42 @@
-This is the devops first file
+
+pipeline ---> automation script
+
+pipeline ( build the code and deploy the code )
+
+
+
+
+pipeline {
+    stages {
+        stage('sonarqube') {
+
+        }
+        stage('build the code') {
+            steps {
+
+            }
+        }
+        stage('copy the files') {
+            steps {
+
+            }
+        }
+        stage('login into the server') {
+
+        }
+        stage('update and deploy the application') {
+            steps {
+
+            }
+            steps {
+
+            }
+            steps {
+
+            }
+        }
+        stage('selenium test') {
+
+        }
+    }    
+}
